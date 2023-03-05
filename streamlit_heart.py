@@ -1,13 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-
-
-
-# In[43]:
+# In[47]:
 
 
 import pandas as pd
@@ -17,13 +11,15 @@ import streamlit as st
 from PIL import Image
 
 
-# In[44]:
+# In[78]:
 
 
-data_test = pd.read_csv('C:/Users/AB54/Desktop/streamlit_project/heart/test.csv')
+url = 'https://github.com/stoozman/heart_diseases/blob/main/test.csv?raw=true'
+#url = 'https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv?raw=true'
+data_test = pd.read_csv(url,index_col=0)
 
 
-# In[45]:
+# In[80]:
 
 
 data_test['age'] = data_test['age'].astype(float)
@@ -33,7 +29,7 @@ data_test['alco'] = data_test['alco'].astype(bool)
 data_test['active'] = data_test['active'].astype(bool)
 
 
-# In[46]:
+# In[81]:
 
 
 
@@ -127,16 +123,4 @@ def main():
      
 if __name__=='__main__':
     main()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
